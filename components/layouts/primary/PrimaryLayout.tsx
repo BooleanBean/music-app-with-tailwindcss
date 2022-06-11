@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Footer from '../../navigation/footer/Footer';
+import Header from '../../navigation/header/Header';
 
 export interface IPrimaryLayout extends React.ComponentPropsWithoutRef<'div'> {
    justify?: 'items-center' | 'items-start';
@@ -14,11 +16,11 @@ const PrimaryLayout: React.FC<IPrimaryLayout> = ({
          <Head>
             <title>Music App</title>
          </Head>
-         <div {...divProps} className={`min-h-screen flex flex-col ${justify}`}>
-            header
+         <div className={`min-h-screen flex flex-col ${justify}`} {...divProps}>
+            <Header />
             <main className="px-5">{children}</main>
             <div className="m-auto" />
-            footer
+            <Footer />
          </div>
       </>
    );
