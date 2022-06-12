@@ -9,8 +9,10 @@ const DynamicPlayer = dynamic(() => import('../../player/Player'), {
 
 const Footer: React.FC<IFooter> = () => {
    return (
-      <div className="w-full h-20 border-t-2 px-6 flex justify-center items-center">
+      <div className="w-full h-20 border-t-2 px-6 flex justify-between items-center">
+         <div>Song Details</div>
          <DynamicPlayer url="https://cdn.pixabay.com/audio/2022/06/03/audio_c3d218496a.mp3" />
+         <div>Links from Songer</div>
       </div>
    );
 };

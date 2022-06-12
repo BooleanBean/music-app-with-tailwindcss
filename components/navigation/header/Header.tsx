@@ -10,8 +10,7 @@ const Header: React.FC<IHeader> = (props) => {
          {...props}
       >
          <div className="space-x-4 flex items-center">
-            <Link href="/">Home</Link>
-            <Link href="/playlist">Playlist</Link>
+            <Link href="/">Recently Listened SOngs Goes Here</Link>
          </div>
 
          <AuthButton />
