@@ -1,8 +1,6 @@
 import { IHeader } from './Header';
 
-const base: IHeader = {
-   sampleTextProp: 'Hello world!',
-};
+const base: IHeader = {};
 
 export const mockHeaderProps = {
    base,

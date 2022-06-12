@@ -1,6 +1,8 @@
 import ReactPlayer, { ReactPlayerProps } from 'react-player/lazy';
 
-export interface IPlayer extends ReactPlayerProps {}
+export interface IPlayer extends ReactPlayerProps {
+   url: string;
+}
 
 const Player: React.FC<IPlayer> = (props) => {
    return (
