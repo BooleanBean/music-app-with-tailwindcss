@@ -1,25 +1,28 @@
 import Head from 'next/head';
 import Footer from '../../navigation/footer/Footer';
 import Header from '../../navigation/header/Header';
+import SidebarLayout from '../sidebar/SidebarLayout';
 
-export interface IPrimaryLayout extends React.ComponentPropsWithoutRef<'div'> {
-   justify?: 'items-center' | 'items-start';
-}
+export interface IPrimaryLayout extends React.ComponentPropsWithoutRef<'div'> {}
 
-const PrimaryLayout: React.FC<IPrimaryLayout> = ({
-   children,
-   justify = 'items-center',
-   ...divProps
-}) => {
+const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children, ...divProps }) => {
    return (
       <>
          <Head>
             <title>Music App</title>
          </Head>
-         <div className={`min-h-screen flex flex-col ${justify}`} {...divProps}>
-            <Header />
-            <main className="px-5">{children}</main>
-            <div className="m-auto" />
+
+         <div
+            className={`min-h-screen w-full flex flex-col items-start justify-between`}
+            {...divProps}
+         >
+            <div className="flex flex-1 w-full h-screen">
+               <SidebarLayout />
+               <div className="flex flex-col flex-1 w-full h-[calc(100vh-5rem)] overflow-y-scroll">
+                  <Header />
+                  <main className="flex-1 !h-16">{children}</main>
+               </div>
+            </div>
             <Footer />
          </div>
       </>

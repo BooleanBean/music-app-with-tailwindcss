@@ -2,11 +2,7 @@ import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 import { NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {
-   return (
-      <section className="flex flex-col items-center gap-y-5 mt-12 sm:mt-36">
-         Home page
-      </section>
-   );
+   return <section className="h-[2500px]">Home page</section>;
 };
 
 export default Home;
